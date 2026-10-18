@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ALVIDELO - bespoke car selection</title>
+
+    <link rel="icon" type="image/x-icon" href="images/car maket.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="alternate" hreflang="lt" href="lt/index.html" />
+    <link rel="alternate" hreflang="ru" href="ru/index.html" />
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header__inner">
+            <a class="logo" href="#" aria-label="ALVIDELO">
+                <img src="images/ALVIDELO logo.png" alt="ALVIDELO logo" />
+            </a>
+
+            <nav class="nav" aria-label="Основная навигация">
+                <a href="#services">Services</a>
+                <a href="#steps">Our process</a>
+                <a href="#reviews">Gallery</a>
+                <a href="#about">About</a>
+            </nav>
+
+            <div class="header__right">
+                <a class="phone" href="tel:+37060612748">
+                    <img class="phone__icon" src="images/icons/telephone.png" />
+                    <span>+37060612748</span>
+                </a>
+                <a class="btn btn--primary header__button" href="#form">Submit a request</a>
+                <div class="langs">
+                    <a href="lt/index.html"><span>LT</span></a>
+                    <a href="ru/index.html"><span>RU</span></a>
+                    <a href="index.html"><strong>EN</strong></a>
+                </div>
+            </div>
+
+            <button class="burger" type="button" aria-label="Открыть меню">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero__inner">
+                <div class="hero__content">
+                    <p class="eyebrow">BESPOKE CAR SELECTION</p>
+
+                    <h1>
+                        YOUR PERFECT CAR. <span>OUR EXPERTISE</span>
+                    </h1>
+
+                    <p class="hero__description">
+                        We source, verify and deliver your <br class="desktop-only" />
+                        ideal vehicle — seamlessly, from start to finish.
+                    </p>
+
+                    <div class="advantages">
+                        <div class="advantage">
+                            <div class="advantage__icon advantage__icon--cyan">
+                                <img class="advantage__image" src="images/icons/save-money.png" alt=""
+                                    aria-hidden="true" />
+                            </div>
+                            <div>
+                                <h3>SAVE<br />UP TO 20%</h3>
+                                <p>below market value</p>
+                            </div>
+                        </div>
+
+                        <div class="advantage">
+                            <div class="advantage__icon advantage__icon--purple">
+                                <span>✓</span>
+                            </div>
+                            <div>
+                                <h3>TRANSPARENCY<br />GUARANTEED</h3>
+                                <p>full transparency at<br />every stage of the process</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hero__actions">
+                        <a class="btn btn--primary" href="#form">Request a consultation</a>
+                        <a class="btn btn--outline" href="#reviews">View our car selection</a>
+                    </div>
+                </div>
+
+                <div class="hero__visual">
+                    <div class="glow glow--one"></div>
+                    <div class="glow glow--two"></div>
+                    <div class="car-card">
+                        <img src="images/car%20maket.png" alt="Автомобиль ALVIDELO, вид сверху" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="service-card" id="form">
+                    <h2>Find the service that fits your needs</h2>
+                    <form class="service-card__body request-form" data-success="Your request is ready. We will contact you shortly.">
+                        <input class="form-field" type="text" name="car-brand" placeholder="Car brand" maxlength="50" required autocomplete="off" />
+                        <input class="form-field form-field--budget" type="text" name="budget" placeholder="Budget" inputmode="numeric" pattern="[0-9]{1,10}" maxlength="10" required autocomplete="off" />
+                        <input class="form-field" type="text" name="country" placeholder="Country to deliver to" maxlength="50" required autocomplete="country-name" />
+                        <button class="btn btn--primary service-card__button" type="submit">
+                            Submit a request
+                        </button>
+                        <p class="form-status" role="status" aria-live="polite"></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="placeholder-section" id="services">
+            <div class="container">
+                <!-- <p class="eyebrow">УСЛУГИ</p> -->
+                <h2>We’ll find a car that meets your requirements</h2>
+            </div>
+        </section>
+
+        <section class="placeholder-section placeholder-section--light" id="steps">
+            <div class="container">
+                <p class="eyebrow">OUR PROCESS</p>
+                <h2>From your request to the delivery of your vehicle</h2>
+
+                <div class="work-steps">
+                    <article class="work-step">
+                        <span class="work-step__number">1</span>
+                        <div class="work-step__icon">
+                            <img src="images/icons/contact-form.png" alt="">
+                        </div>
+                        <div class="work-step__content">
+                            <h3>Submit Your request</h3>
+                            <p>Tell us what kind of vehicle you’re looking for</p>
+                        </div>
+                    </article>
+
+                    <article class="work-step">
+                        <span class="work-step__number">2</span>
+                        <div class="work-step__icon">
+                            <img src="images/icons/check copy.png" alt="">
+                        </div>
+                        <div class="work-step__content">
+                            <h3>We search the available options</h3>
+                            <p>We source the best vehicles based on your requirements</p>
+                        </div>
+                    </article>
+
+                    <article class="work-step">
+                        <span class="work-step__number">3</span>
+                        <div class="work-step__icon">
+                            <img src="images/icons/search.png" alt="">
+                        </div>
+                        <div class="work-step__content">
+                            <h3>Inspecting the vehicle</h3>
+                            <p>We conduct a comprehensive inspection of the vehicle and its history</p>
+                        </div>
+                    </article>
+
+                    <article class="work-step">
+                        <span class="work-step__number">4</span>
+                        <div class="work-step__icon">
+                            <img src="images/icons/agreement.png" alt="">
+                        </div>
+                        <div class="work-step__content">
+                            <h3>Approval & purchase</h3>
+                            <p>We confirm all details with you and handle the purchase securely</p>
+                        </div>
+                    </article>
+
+                    <article class="work-step">
+                        <span class="work-step__number">5</span>
+                        <div class="work-step__icon">
+                            <img src="images/icons/driving-car.png" alt="">
+                        </div>
+                        <div class="work-step__content">
+                            <h3>Delivery</h3>
+                            <p>We arrange the delivery and hand over your vehicle at the agreed location — ready for you
+                                to enjoy</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="placeholder-section" id="reviews">
+            <div class="container">
+                <p class="eyebrow">GALLERY</p>
+                <h2>Vehicles curated by our experts</h2>
+
+                <div class="reviews-carousel">
+                    <button class="carousel-button carousel-button--prev" type="button"
+                        aria-label="Предыдущий автомобиль">
+                        ←
+                    </button>
+
+                    <div class="reviews-carousel__track">
+                        <article class="review-car">
+                            <img src="images/bmw.jpg" alt="Пример автомобиля" />
+                        </article>
+
+                        <article class="review-car">
+                            <img src="images/merc inside.jpg" alt="Пример автомобиля" />
+                        </article>
+
+                        <article class="review-car">
+                            <img src="images/merc.jpg" alt="Пример автомобиля" />
+                        </article>
+
+                        <article class="review-car">
+                            <img src="images/mits.png" alt="Пример автомобиля" />
+                        </article>
+
+                        <article class="review-car">
+                            <img src="images/range.png" alt="Пример автомобиля" />
+                        </article>
+                    </div>
+
+                    <button class="carousel-button carousel-button--next" type="button"
+                        aria-label="Следующий автомобиль">
+                        →
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="placeholder-section placeholder-section--light" id="about">
+            <div class="container">
+                <p class="eyebrow">ABOUT THE COMPANY</p>
+                <h2>ALVIDELO — bespoke car selection</h2>
+                <p><br>ALVIDELO is a bespoke vehicle sourcing service created for those who value quality, time and
+                    confidence in every
+                    decision.
+                    We manage the entire process — from sourcing a vehicle that meets your requirements to professional
+                    inspection,
+                    purchase and delivery.
+                    We don’t offer random options. We carefully study the market, select vehicles that meet our
+                    standards and pay
+                    attention to every detail to ensure the final choice meets your expectations.
+                    Your requirements. Our expertise. Your vehicle, our commitment.
+                </p>
+            </div>
+        </section>
+
+        <section class="placeholder-section" id="trust">
+            <div class="container">
+                <p class="eyebrow">TRUST</p>
+                <h2>Why Clients trust us</h2>
+
+                <div class="trust-list">
+                    <article class="trust-item">
+                        <div class="trust-item__icon">
+                            <img src="images/icons/customer-success.png" alt="">
+                        </div>
+                        <div>
+                            <h3>Experience and expertise</h3>
+                            <p>Professional vehicle inspections backed by specialized technical training and hands-on
+                                experience in automotive
+                                diagnostics and repair</p>
+                        </div>
+                    </article>
+
+                    <article class="trust-item">
+                        <div class="trust-item__icon">
+                            <img src="images/icons/check.png" alt="">
+                        </div>
+                        <div>
+                            <h3>Honesty and transparency</h3>
+                            <p>We work under a clear agreement. All terms and costs are transparent — with no hidden
+                                fees or unexpected
+                                charges</p>
+                        </div>
+                    </article>
+
+                    <article class="trust-item">
+                        <div class="trust-item__icon">
+                            <img src="images/icons/time-is-money.png" alt="">
+                        </div>
+                        <div>
+                            <h3>Time efficiency</h3>
+                            <p>We handle the entire sourcing and inspection process, allowing you to focus on what matters most</p>
+                        </div>
+                    </article>
+
+                    <article class="trust-item">
+                        <div class="trust-item__icon">
+                            <img src="images/icons/shield.png" alt="">
+                        </div>
+                        <div>
+                            <h3>Results you can trust</h3>
+                            <p>We carefully select the finest vehicles on the market, tailored to your requirements and criteria</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const burger = document.querySelector(".burger");
+        const nav = document.querySelector(".nav");
+
+        burger?.addEventListener("click", () => {
+            nav.classList.toggle("nav--open");
+            burger.classList.toggle("burger--open");
+        });
+
+
+        const carousel = document.querySelector('.reviews-carousel__track');
+        const prevButton = document.querySelector('.carousel-button--prev');
+        const nextButton = document.querySelector('.carousel-button--next');
+
+        nextButton?.addEventListener('click', () => {
+            carousel.scrollBy({ left: carousel.clientWidth * 0.8, behavior: 'smooth' });
+        });
+
+        prevButton?.addEventListener('click', () => {
+            carousel.scrollBy({ left: -carousel.clientWidth * 0.8, behavior: 'smooth' });
+        });
+
+        document.querySelectorAll('.form-field--budget').forEach((field) => {
+            field.addEventListener('input', () => {
+                field.value = field.value.replace(/\D/g, '').slice(0, 10);
+            });
+        });
+
+        document.querySelectorAll('.request-form').forEach((form) => {
+            form.addEventListener('submit', (event) => {
+                event.preventDefault();
+                form.querySelector('.form-status').textContent = form.dataset.success;
+            });
+        });
+    </script>
+</body>
+
+</html>

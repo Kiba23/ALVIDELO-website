@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="lt">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ALVIDELO - individualus automobilio parinkimas</title>
+
+  <link rel="icon" type="image/x-icon" href="../images/car maket.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+
+  <link rel="alternate" hreflang="ru" href="../ru/index.html" />
+  <link rel="alternate" hreflang="en" href="../index.html" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="logo" href="#" aria-label="ALVIDELO">
+        <img src="../images/ALVIDELO logo.png" alt="ALVIDELO logo" />
+      </a>
+
+      <nav class="nav" aria-label="Основная навигация">
+        <a href="#services">Paslaugos</a>
+        <a href="#steps">Mūsų procesas</a>
+        <a href="#reviews">Galerija</a>
+        <a href="#about">Apie įmonę</a>
+      </nav>
+
+      <div class="header__right">
+        <a class="phone" href="tel:+37060612748">
+          <img class="phone__icon" src="../images/icons/telephone.png" />
+          <span>+37060612748</span>
+        </a>
+        <a class="btn btn--primary header__button" href="#form">Pateikti užklausą</a>
+        <div class="langs">
+          <a href="index.html"><strong>LT</strong></a>
+          <a href="../ru/index.html"><span>RU</span></a>
+          <a href="../index.html"><span>EN</span></a>
+        </div>
+      </div>
+
+      <button class="burger" type="button" aria-label="Открыть меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="eyebrow">INDIVIDUALUS AUTOMOBILIO PARINKIMAS</p>
+
+          <h1>
+            JŪSŲ IDEALUS<br />
+            AUTOMOBILIS – <span>MŪSŲ RŪPESTIS</span>
+          </h1>
+
+          <p class="hero__description">
+            Atrinksime Jums tinkamiausią automobilį, kruopščiai jį patikrinsime ir <br class="desktop-only" />
+            pasirūpinsime pristatymu – nuo pradžios iki galo
+          </p>
+
+          <div class="advantages">
+            <div class="advantage">
+              <div class="advantage__icon advantage__icon--cyan">
+                <img class="advantage__image" src="../images/icons/save-money.png" alt="" aria-hidden="true" />
+              </div>
+              <div>
+                <h3>SUTAUPYKITE<br />IKI 20%</h3>
+                <p>nuo rinkos kainos</p>
+              </div>
+            </div>
+
+            <div class="advantage">
+              <div class="advantage__icon advantage__icon--purple">
+                <span>✓</span>
+              </div>
+              <div>
+                <h3>GARANTUOTAS<br />SKAIDRUMAS</h3>
+                <p>visiškas skaidrumas<br />kiekviename proceso etape</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#form">Pateikti užklausą</a>
+            <a class="btn btn--outline" href="#reviews">Peržiūrėti automobilių pavyzdžius</a>
+          </div>
+        </div>
+
+        <div class="hero__visual">
+          <div class="glow glow--one"></div>
+          <div class="glow glow--two"></div>
+          <div class="car-card">
+            <img src="../images/car%20maket.png" alt="Автомобиль ALVIDELO, вид сверху" />
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="service-card" id="form">
+          <h2>Pasirinkite paslaugą pagal savo poreikius</h2>
+          <form class="service-card__body request-form" data-success="Užklausa paruošta. Netrukus su jumis susisieksime.">
+            <input class="form-field" type="text" name="car-brand" placeholder="Automobilio markė" maxlength="50" required autocomplete="off" />
+            <input class="form-field form-field--budget" type="text" name="budget" placeholder="Jūsų biudžetas" inputmode="numeric" pattern="[0-9]{1,10}" maxlength="10" required autocomplete="off" />
+            <input class="form-field" type="text" name="country" placeholder="Pristatymo šalis" maxlength="50" required autocomplete="country-name" />
+            <button class="btn btn--primary service-card__button" type="submit">
+              Pateikti užklausą
+            </button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="placeholder-section" id="services">
+      <div class="container">
+        <!-- <p class="eyebrow">УСЛУГИ</p> -->
+        <h2>Parinksime automobilį, atitinkantį Jūsų reikalavimus</h2>
+      </div>
+    </section>
+
+    <section class="placeholder-section placeholder-section--light" id="steps">
+      <div class="container">
+        <p class="eyebrow">MŪSŲ PROCESAS</p>
+        <h2>Nuo užklausos iki automobilio pristatymo</h2>
+
+        <div class="work-steps">
+          <article class="work-step">
+            <span class="work-step__number">1</span>
+            <div class="work-step__icon">
+              <img src="../images/icons/contact-form.png" alt="">
+            </div>
+            <div class="work-step__content">
+              <h3>Pateikite užklausą</h3>
+              <p>Papasakokite, kokio automobilio ieškote</p>
+            </div>
+          </article>
+
+          <article class="work-step">
+            <span class="work-step__number">2</span>
+            <div class="work-step__icon">
+              <img src="../images/icons/check copy.png" alt="">
+            </div>
+            <div class="work-step__content">
+              <h3>Parinksime tinkamus variantus</h3>
+              <p>Ieškome geriausių pasiūlymų pagal Jūsų reikalavimus</p>
+            </div>
+          </article>
+
+          <article class="work-step">
+            <span class="work-step__number">3</span>
+            <div class="work-step__icon">
+              <img src="../images/icons/search.png" alt="">
+            </div>
+            <div class="work-step__content">
+              <h3>Patikriname automobilį</h3>
+              <p>Atliekame išsamią automobilio techninės būklės ir istorijos patikrą</p>
+            </div>
+          </article>
+
+          <article class="work-step">
+            <span class="work-step__number">4</span>
+            <div class="work-step__icon">
+              <img src="../images/icons/agreement.png" alt="">
+            </div>
+            <div class="work-step__content">
+              <h3>Pasirūpiname sandoriu</h3>
+              <p>Suderiname visas detales ir pasirūpiname visu automobilio įsigijimo procesu nuo
+                pradžios iki galo</p>
+            </div>
+          </article>
+
+          <article class="work-step">
+            <span class="work-step__number">5</span>
+            <div class="work-step__icon">
+              <img src="../images/icons/driving-car.png" alt="">
+            </div>
+            <div class="work-step__content">
+              <h3>Pristatome automobilį</h3>
+              <p>Organizuojame automobilio pristatymą ir perduodame jį Jūsų pasirinktoje vietoje –
+                visiškai paruoštą naudojimui</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="placeholder-section" id="reviews">
+      <div class="container">
+        <p class="eyebrow">GALERIJA</p>
+        <h2>Mūsų ekspertų atrinkti automobiliai</h2>
+
+        <div class="reviews-carousel">
+          <button class="carousel-button carousel-button--prev" type="button" aria-label="Предыдущий автомобиль">
+            ←
+          </button>
+
+          <div class="reviews-carousel__track">
+            <article class="review-car">
+              <img src="../images/bmw.jpg" alt="Пример автомобиля" />
+            </article>
+
+            <article class="review-car">
+              <img src="../images/merc inside.jpg" alt="Пример автомобиля" />
+            </article>
+
+            <article class="review-car">
+              <img src="../images/merc.jpg" alt="Пример автомобиля" />
+            </article>
+
+            <article class="review-car">
+              <img src="../images/mits.png" alt="Пример автомобиля" />
+            </article>
+
+            <article class="review-car">
+              <img src="../images/range.png" alt="Пример автомобиля" />
+            </article>
+          </div>
+
+          <button class="carousel-button carousel-button--next" type="button" aria-label="Следующий автомобиль">
+            →
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="placeholder-section placeholder-section--light" id="about">
+      <div class="container">
+        <p class="eyebrow">APIE ĮMONĘ</p>
+        <h2>ALVIDELO — individualus automobilio parinkimas</h2>
+        <p><br>ALVIDELO – individualaus automobilių parinkimo paslauga, skirta tiems, kurie vertina kokybę, laiką ir
+          užtikrintumą
+          priimant sprendimus.
+          Rūpinamės visu procesu – nuo Jūsų kriterijus atitinkančio automobilio paieškos iki profesionalios patikros,
+          įsigijimo
+          ir pristatymo.
+          Nesiūlome atsitiktinių variantų. Kruopščiai analizuojame rinką, atrenkame mūsų standartus atitinkančius
+          automobilius ir atkreipiame dėmesį į kiekvieną detalę, kad galutinis pasirinkimas pateisintų Jūsų lūkesčius.
+          Jūsų reikalavimai. Mūsų ekspertizė. Jūsų automobilis – mūsų atsakomybė.</p>
+      </div>
+    </section>
+
+    <section class="placeholder-section" id="trust">
+      <div class="container">
+        <p class="eyebrow">PASITIKĖJIMAS</p>
+        <h2>Kodėl mumis pasitiki</h2>
+
+        <div class="trust-list">
+          <article class="trust-item">
+            <div class="trust-item__icon">
+              <img src="../images/icons/customer-success.png" alt="">
+            </div>
+            <div>
+              <h3>Patirtis ir ekspertizė</h3>
+              <p>Profesionalus automobilių vertinimas, paremtas specializuotu techniniu išsilavinimu bei praktine
+                automobilių
+                diagnostikos ir remonto patirtimi</p>
+            </div>
+          </article>
+
+          <article class="trust-item">
+            <div class="trust-item__icon">
+              <img src="../images/icons/check.png" alt="">
+            </div>
+            <div>
+              <h3>Sąžiningumas ir skaidrumas</h3>
+              <p>Dirbame pagal aiškų susitarimą. Visos sąlygos ir išlaidos yra skaidrios – be paslėptų mokesčių ar
+                netikėtų
+                papildomų išlaidų</p>
+            </div>
+          </article>
+
+          <article class="trust-item">
+            <div class="trust-item__icon">
+              <img src="../images/icons/time-is-money.png" alt="">
+            </div>
+            <div>
+              <h3>Taupome jūsų laiką</h3>
+              <p>Perimame visą automobilio paieškos ir patikros procesą, kad Jūs galėtumėte susitelkti į tai, kas
+                svarbiausia</p>
+            </div>
+          </article>
+
+          <article class="trust-item">
+            <div class="trust-item__icon">
+              <img src="../images/icons/shield.png" alt="">
+            </div>
+            <div>
+              <h3>Rezultatas, kuriuo galite pasitikėti</h3>
+              <p>Kruopščiai atrenkame geriausius rinkos pasiūlymus pagal Jūsų poreikius ir kriterijus</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const burger = document.querySelector(".burger");
+    const nav = document.querySelector(".nav");
+
+    burger?.addEventListener("click", () => {
+      nav.classList.toggle("nav--open");
+      burger.classList.toggle("burger--open");
+    });
+
+
+    const carousel = document.querySelector('.reviews-carousel__track');
+    const prevButton = document.querySelector('.carousel-button--prev');
+    const nextButton = document.querySelector('.carousel-button--next');
+
+    nextButton?.addEventListener('click', () => {
+      carousel.scrollBy({ left: carousel.clientWidth * 0.8, behavior: 'smooth' });
+    });
+
+    prevButton?.addEventListener('click', () => {
+      carousel.scrollBy({ left: -carousel.clientWidth * 0.8, behavior: 'smooth' });
+    });
+
+        document.querySelectorAll('.form-field--budget').forEach((field) => {
+          field.addEventListener('input', () => {
+            field.value = field.value.replace(/\D/g, '').slice(0, 10);
+          });
+        });
+
+        document.querySelectorAll('.request-form').forEach((form) => {
+          form.addEventListener('submit', (event) => {
+            event.preventDefault();
+            form.querySelector('.form-status').textContent = form.dataset.success;
+          });
+        });
+  </script>
+</body>
+
+</html>
