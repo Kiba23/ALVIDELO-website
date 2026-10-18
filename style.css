@@ -107,6 +107,10 @@ a {
   opacity: .72;
 }
 
+.nav__languages {
+  display: none;
+}
+
 .header__right {
   display: flex;
   align-items: center;
@@ -936,6 +940,33 @@ a {
   .nav--open a {
     padding: 13px 0;
     font-size: 16px;
+  }
+
+  .nav--open .nav__languages {
+    display: flex;
+    gap: 10px;
+    margin-top: 14px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(255,255,255,.16);
+  }
+
+  .nav--open .nav__languages a {
+    flex: 1;
+    padding: 10px 0;
+    border: 1px solid rgba(255,255,255,.28);
+    border-radius: 10px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 1;
+    text-align: center;
+  }
+
+  .nav--open .nav__languages a:hover,
+  .nav--open .nav__languages .nav__language--active {
+    border-color: #2448ff;
+    background: #2448ff;
+    opacity: 1;
   }
 
   .hero {

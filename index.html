@@ -30,6 +30,11 @@
                 <a href="#steps">Our process</a>
                 <a href="#reviews">Gallery</a>
                 <a href="#about">About</a>
+                <div class="nav__languages" aria-label="Language selector">
+                    <a href="lt/index.html">LT</a>
+                    <a href="ru/index.html">RU</a>
+                    <a class="nav__language--active" href="index.html" aria-current="page">EN</a>
+                </div>
             </nav>
 
             <div class="header__right">
@@ -45,7 +50,7 @@
                 </div>
             </div>
 
-            <button class="burger" type="button" aria-label="Открыть меню">
+            <button class="burger" type="button" aria-label="Open menu" aria-expanded="false">
                 <span></span><span></span><span></span>
             </button>
         </div>
@@ -312,6 +317,7 @@
         burger?.addEventListener("click", () => {
             nav.classList.toggle("nav--open");
             burger.classList.toggle("burger--open");
+            burger.setAttribute("aria-expanded", nav.classList.contains("nav--open"));
         });
 
 
