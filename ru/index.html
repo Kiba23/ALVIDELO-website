@@ -19,7 +19,7 @@
 </head>
 
 <body>
-  <header class="header">
+  <header class="header" id="top">
     <div class="container header__inner">
       <a class="logo" href="#" aria-label="ALVIDELO">
         <img src="../images/ALVIDELO logo.png" alt="ALVIDELO logo" />
@@ -298,6 +298,38 @@
       </div>
     </section>
   </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a class="footer__logo" href="#top" aria-label="ALVIDELO — наверх страницы">
+            <img src="../images/ALVIDELO logo.png" alt="Логотип ALVIDELO" />
+          </a>
+          <p>Профессиональный подбор и проверка автомобилей в Литве.</p>
+        </div>
+
+        <div class="footer__contacts">
+          <p class="footer__label">Связаться с нами</p>
+          <a class="phone footer__phone" href="tel:+37060612748">
+            <img class="phone__icon" src="../images/icons/telephone.png" alt="" />
+            <span>+37060612748</span>
+          </a>
+        </div>
+
+        <nav class="footer__links" aria-label="Правовая информация">
+          <a href="../documents/privacy-policy.pdf" download>Политика конфиденциальности</a>
+          <a href="../documents/terms-of-use.pdf" download>Условия использования</a>
+          <a href="../documents/cookie-policy.pdf" download>Политика cookies</a>
+          <a class="footer__to-top" href="#top">Вернуться наверх <span aria-hidden="true">↑</span></a>
+        </nav>
+      </div>
+
+      <div class="footer__bottom">
+        <small>© 2026 ALVIDELO. Все права защищены.</small>
+      </div>
+    </div>
+  </footer>
 
   <script>
     const burger = document.querySelector(".burger");

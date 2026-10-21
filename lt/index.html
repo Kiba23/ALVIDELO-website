@@ -19,7 +19,7 @@
 </head>
 
 <body>
-  <header class="header">
+  <header class="header" id="top">
     <div class="container header__inner">
       <a class="logo" href="#" aria-label="ALVIDELO">
         <img src="../images/ALVIDELO logo.png" alt="ALVIDELO logo" />
@@ -307,6 +307,38 @@
       </div>
     </section>
   </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a class="footer__logo" href="#top" aria-label="ALVIDELO — grįžti į puslapio viršų">
+            <img src="../images/ALVIDELO logo.png" alt="ALVIDELO logotipas" />
+          </a>
+          <p>Profesionalus automobilių parinkimas ir patikra Lietuvoje.</p>
+        </div>
+
+        <div class="footer__contacts">
+          <p class="footer__label">Susisiekite su mumis</p>
+          <a class="phone footer__phone" href="tel:+37060612748">
+            <img class="phone__icon" src="../images/icons/telephone.png" alt="" />
+            <span>+37060612748</span>
+          </a>
+        </div>
+
+        <nav class="footer__links" aria-label="Teisinė informacija">
+          <a href="../documents/privacy-policy.pdf" download>Privatumo politika</a>
+          <a href="../documents/terms-of-use.pdf" download>Naudojimosi sąlygos</a>
+          <a href="../documents/cookie-policy.pdf" download>Slapukų politika</a>
+          <a class="footer__to-top" href="#top">Grįžti į viršų <span aria-hidden="true">↑</span></a>
+        </nav>
+      </div>
+
+      <div class="footer__bottom">
+        <small>© 2026 ALVIDELO. Visos teisės saugomos.</small>
+      </div>
+    </div>
+  </footer>
 
   <script>
     const burger = document.querySelector(".burger");
