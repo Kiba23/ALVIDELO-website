@@ -4,6 +4,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta name="verify-paysera" content="116ab84c300ea37770ee880301375d47">
+
   <title>ALVIDELO - подбор автомобиля под ключ</title>
 
   <link rel="icon" type="image/x-icon" href="../images/car maket.png" />
@@ -112,10 +115,14 @@
       <div class="container">
         <div class="service-card" id="form">
           <h2>Подберите услугу под ваши параметры</h2>
-          <form class="service-card__body request-form" data-success="Заявка подготовлена. Мы свяжемся с вами в ближайшее время.">
-            <input class="form-field" type="text" name="car-brand" placeholder="Марка автомобиля" maxlength="50" required autocomplete="off" />
-            <input class="form-field form-field--budget" type="text" name="budget" placeholder="Бюджет" inputmode="numeric" pattern="[0-9]{1,10}" maxlength="10" required autocomplete="off" />
-            <input class="form-field" type="text" name="country" placeholder="Страна, в которую доставить" maxlength="50" required autocomplete="country-name" />
+          <form class="service-card__body request-form"
+            data-success="Заявка подготовлена. Мы свяжемся с вами в ближайшее время.">
+            <input class="form-field" type="text" name="car-brand" placeholder="Марка автомобиля" maxlength="50"
+              required autocomplete="off" />
+            <input class="form-field form-field--budget" type="text" name="budget" placeholder="Бюджет"
+              inputmode="numeric" pattern="[0-9]{1,10}" maxlength="10" required autocomplete="off" />
+            <input class="form-field" type="text" name="country" placeholder="Страна, в которую доставить"
+              maxlength="50" required autocomplete="country-name" />
             <button class="btn btn--primary service-card__button" type="submit">
               Подать заявку
             </button>
@@ -318,9 +325,8 @@
         </div>
 
         <nav class="footer__links" aria-label="Правовая информация">
-          <a href="../documents/privacy-policy.pdf" download>Политика конфиденциальности</a>
-          <a href="../documents/terms-of-use.pdf" download>Условия использования</a>
-          <a href="../documents/cookie-policy.pdf" download>Политика cookies</a>
+          <a href="../documents/Privatumo politika alvidelo.docx" download>Политика конфиденциальности</a>
+          <a href="../documents/Slapuku politika alvidelo.docx" download>Политика cookies</a>
           <a class="footer__to-top" href="#top">Вернуться наверх <span aria-hidden="true">↑</span></a>
         </nav>
       </div>
@@ -354,18 +360,18 @@
       carousel.scrollBy({ left: -carousel.clientWidth * 0.8, behavior: 'smooth' });
     });
 
-        document.querySelectorAll('.form-field--budget').forEach((field) => {
-          field.addEventListener('input', () => {
-            field.value = field.value.replace(/\D/g, '').slice(0, 10);
-          });
-        });
+    document.querySelectorAll('.form-field--budget').forEach((field) => {
+      field.addEventListener('input', () => {
+        field.value = field.value.replace(/\D/g, '').slice(0, 10);
+      });
+    });
 
-        document.querySelectorAll('.request-form').forEach((form) => {
-          form.addEventListener('submit', (event) => {
-            event.preventDefault();
-            form.querySelector('.form-status').textContent = form.dataset.success;
-          });
-        });
+    document.querySelectorAll('.request-form').forEach((form) => {
+      form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        form.querySelector('.form-status').textContent = form.dataset.success;
+      });
+    });
   </script>
 </body>
 

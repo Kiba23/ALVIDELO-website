@@ -33,6 +33,7 @@ a {
 
 button,
 a {
+  font-family: inherit;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -623,8 +624,9 @@ a {
   }
 
   .footer__logo {
+    margin: auto;
     width: 132px;
-    height: 63px;
+    height: auto;
   }
 }
 

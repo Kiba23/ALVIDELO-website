@@ -4,6 +4,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta name="verify-paysera" content="116ab84c300ea37770ee880301375d47">
+
   <title>ALVIDELO - individualus automobilio parinkimas</title>
 
   <link rel="icon" type="image/x-icon" href="../images/car maket.png" />
@@ -112,10 +115,14 @@
       <div class="container">
         <div class="service-card" id="form">
           <h2>Pasirinkite paslaugą pagal savo poreikius</h2>
-          <form class="service-card__body request-form" data-success="Užklausa paruošta. Netrukus su jumis susisieksime.">
-            <input class="form-field" type="text" name="car-brand" placeholder="Automobilio markė" maxlength="50" required autocomplete="off" />
-            <input class="form-field form-field--budget" type="text" name="budget" placeholder="Jūsų biudžetas" inputmode="numeric" pattern="[0-9]{1,10}" maxlength="10" required autocomplete="off" />
-            <input class="form-field" type="text" name="country" placeholder="Pristatymo šalis" maxlength="50" required autocomplete="country-name" />
+          <form class="service-card__body request-form"
+            data-success="Užklausa paruošta. Netrukus su jumis susisieksime.">
+            <input class="form-field" type="text" name="car-brand" placeholder="Automobilio markė" maxlength="50"
+              required autocomplete="off" />
+            <input class="form-field form-field--budget" type="text" name="budget" placeholder="Jūsų biudžetas"
+              inputmode="numeric" pattern="[0-9]{1,10}" maxlength="10" required autocomplete="off" />
+            <input class="form-field" type="text" name="country" placeholder="Pristatymo šalis" maxlength="50" required
+              autocomplete="country-name" />
             <button class="btn btn--primary service-card__button" type="submit">
               Pateikti užklausą
             </button>
@@ -327,9 +334,8 @@
         </div>
 
         <nav class="footer__links" aria-label="Teisinė informacija">
-          <a href="../documents/privacy-policy.pdf" download>Privatumo politika</a>
-          <a href="../documents/terms-of-use.pdf" download>Naudojimosi sąlygos</a>
-          <a href="../documents/cookie-policy.pdf" download>Slapukų politika</a>
+          <a href="../documents/Privatumo politika alvidelo.docx" download>Privatumo politika</a>
+          <a href="../documents/Slapuku politika alvidelo.docx" download>Slapukų politika</a>
           <a class="footer__to-top" href="#top">Grįžti į viršų <span aria-hidden="true">↑</span></a>
         </nav>
       </div>
@@ -363,18 +369,18 @@
       carousel.scrollBy({ left: -carousel.clientWidth * 0.8, behavior: 'smooth' });
     });
 
-        document.querySelectorAll('.form-field--budget').forEach((field) => {
-          field.addEventListener('input', () => {
-            field.value = field.value.replace(/\D/g, '').slice(0, 10);
-          });
-        });
+    document.querySelectorAll('.form-field--budget').forEach((field) => {
+      field.addEventListener('input', () => {
+        field.value = field.value.replace(/\D/g, '').slice(0, 10);
+      });
+    });
 
-        document.querySelectorAll('.request-form').forEach((form) => {
-          form.addEventListener('submit', (event) => {
-            event.preventDefault();
-            form.querySelector('.form-status').textContent = form.dataset.success;
-          });
-        });
+    document.querySelectorAll('.request-form').forEach((form) => {
+      form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        form.querySelector('.form-status').textContent = form.dataset.success;
+      });
+    });
   </script>
 </body>
 
