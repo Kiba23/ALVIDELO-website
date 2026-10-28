@@ -1304,3 +1304,35 @@ a {
   height: 80%;
   background-color: var(--blue);
 }
+
+/* Анимации включаются только после загрузки JavaScript */
+.motion-ready .reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.65s ease,
+    transform 0.65s cubic-bezier(.22, 1, .36, 1);
+  will-change: opacity, transform;
+}
+
+.motion-ready .reveal--header {
+  transform: translateY(-18px);
+}
+
+.motion-ready .reveal--hero {
+  transition-delay: 0.1s;
+}
+
+.motion-ready .reveal--visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .motion-ready .reveal,
+  .motion-ready .reveal--header {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
