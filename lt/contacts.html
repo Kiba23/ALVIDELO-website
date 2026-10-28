@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="lt">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta name="verify-paysera" content="116ab84c300ea37770ee880301375d47">
+
+  <title>ALVIDELO - individualus automobilio parinkimas</title>
+
+  <link rel="icon" type="image/x-icon" href="../images/car maket.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+
+  <link rel="alternate" hreflang="ru" href="../ru/index.html" />
+  <link rel="alternate" hreflang="en" href="../index.html" />
+</head>
+
+<body>
+  <header class="header" id="top">
+    <div class="container header__inner">
+      <a class="logo" href="index.html" aria-label="ALVIDELO">
+        <img src="../images/ALVIDELO logo.png" alt="ALVIDELO logo" />
+      </a>
+
+      <nav class="nav" aria-label="Основная навигация">
+        <a href="index.html">Pradžia</a>
+        <div class="nav__languages" aria-label="Kalbos pasirinkimas">
+          <a class="nav__language--active" href="contacts.html" aria-current="page">LT</a>
+          <a href="../ru/contacts.html">RU</a>
+          <a href="../contacts.html">EN</a>
+        </div>
+      </nav>
+
+      <div class="header__right">
+        <a class="phone" href="tel:+37060612748">
+          <img class="phone__icon" src="../images/icons/telephone.png" />
+          <span>+37060612748</span>
+        </a>
+        <div class="langs">
+          <a href="contacts.html"><strong>LT</strong></a>
+          <a href="../ru/contacts.html"><span>RU</span></a>
+          <a href="../contacts.html"><span>EN</span></a>
+        </div>
+      </div>
+
+      <button class="burger" type="button" aria-label="Atidaryti meniu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="company-details-container">
+            <div class="section-line"></div>
+            <div class="company-details">
+                <h3>Įmonės duomenys</h3>
+                <h4>MB Alvidelo</h4>
+                <p>Įmonės kodas: 306935836</p>
+                <p>Adresas: Šarkuvos g. 4, 06261 Vilnius</p>
+                <a href="mailto:info@alvidelo.lt">
+                    <p>Email: info@alvidelo.lt</p>
+                </a>
+                <p>Įmonės sąskaita: <br>Paysera LT343500010019128015</p>
+            </div>
+        </section>
+
+        <div class="map-container">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2304.5667807909444!2d25.16818720507355!3d54.71724466878032!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dd92227cb01465%3A0x892d0e7a2cf68cd9!2s%C5%A0arkuvos%20g.%204%2C%20Vilnius%2C%2006261%20Vilniaus%20m.%20sav.!5e0!3m2!1sen!2slt!4v1792837798672!5m2!1sen!2slt"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a class="footer__logo" href="#top" aria-label="ALVIDELO — grįžti į puslapio viršų">
+            <img src="../images/ALVIDELO logo.png" alt="ALVIDELO logotipas" />
+          </a>
+          <p>Profesionalus automobilių parinkimas ir patikra Lietuvoje.</p>
+        </div>
+
+        <div class="footer__contacts">
+          <p class="footer__label">Susisiekite su mumis</p>
+          <a class="phone footer__phone" href="tel:+37060612748">
+            <img class="phone__icon" src="../images/icons/telephone.png" alt="" />
+            <span>+37060612748</span>
+          </a>
+        </div>
+
+        <nav class="footer__links" aria-label="Teisinė informacija">
+          <a href="../documents/Privatumo politika alvidelo.docx" download>Privatumo politika</a>
+          <a href="../documents/Slapuku politika alvidelo.docx" download>Slapukų politika</a>
+          <a href="contacts.html">Kontaktai</a>
+        </nav>
+      </div>
+
+      <div class="footer__bottom">
+        <small>© 2026 ALVIDELO. Visos teisės saugomos.</small>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const burger = document.querySelector(".burger");
+    const nav = document.querySelector(".nav");
+
+    burger?.addEventListener("click", () => {
+      nav.classList.toggle("nav--open");
+      burger.classList.toggle("burger--open");
+      burger.setAttribute("aria-expanded", nav.classList.contains("nav--open"));
+    });
+
+
+    const carousel = document.querySelector('.reviews-carousel__track');
+    const prevButton = document.querySelector('.carousel-button--prev');
+    const nextButton = document.querySelector('.carousel-button--next');
+
+    nextButton?.addEventListener('click', () => {
+      carousel.scrollBy({ left: carousel.clientWidth * 0.8, behavior: 'smooth' });
+    });
+
+    prevButton?.addEventListener('click', () => {
+      carousel.scrollBy({ left: -carousel.clientWidth * 0.8, behavior: 'smooth' });
+    });
+
+    document.querySelectorAll('.form-field--budget').forEach((field) => {
+      field.addEventListener('input', () => {
+        field.value = field.value.replace(/\D/g, '').slice(0, 10);
+      });
+    });
+
+    document.querySelectorAll('.request-form').forEach((form) => {
+      form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        form.querySelector('.form-status').textContent = form.dataset.success;
+      });
+    });
+  </script>
+</body>
+
+</html>

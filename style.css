@@ -1269,3 +1269,38 @@ a {
     padding: 84px 0;
   }
 }
+
+.map-container {
+  width: 100%;
+  max-width: 800px;  /* Limits maximum width on large monitors */
+  margin: 2rem auto; /* Centers the map container with vertical spacing */
+  margin-bottom: 4rem;
+  overflow: hidden;
+  border-radius: 12px; /* Smooth rounded corners for a modern UI */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); /* Soft drop shadow */
+}
+
+.map-container iframe {
+  width: 100%;       /* Makes the map scale with browser width */
+  height: 400px;     /* Fixed uniform height across screens */
+  display: block;    /* Removes inline white space gaps */
+}
+
+.company-details-container {
+  width: max-content;
+  margin: 80px auto;
+  padding: 25px 60px;
+  border-radius: 24px;
+
+  position: relative;
+}
+
+.company-details-container .section-line {
+  position: absolute;
+  left: 40px;
+  top: 35px;
+
+  width: 3px;
+  height: 80%;
+  background-color: var(--blue);
+}
