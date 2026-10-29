@@ -115,10 +115,14 @@
             <div class="container">
                 <div class="service-card" id="form">
                     <h2>Find the service that fits your needs</h2>
-                    <form class="service-card__body request-form" data-success="Your request is ready. We will contact you shortly.">
-                        <input class="form-field" type="text" name="car-brand" placeholder="Car brand" maxlength="50" required autocomplete="off" />
-                        <input class="form-field form-field--budget" type="text" name="budget" placeholder="Budget" inputmode="numeric" pattern="[0-9]{1,10}" maxlength="10" required autocomplete="off" />
-                        <input class="form-field" type="text" name="country" placeholder="Country to deliver to" maxlength="50" required autocomplete="country-name" />
+                    <form class="service-card__body request-form"
+                        data-success="Your request is ready. We will contact you shortly.">
+                        <input class="form-field" type="text" name="car-brand" placeholder="Car brand" maxlength="50"
+                            required autocomplete="off" />
+                        <input class="form-field form-field--budget" type="text" name="budget" placeholder="Budget (€)"
+                            inputmode="numeric" pattern="[0-9]{1,10}" maxlength="10" required autocomplete="off" />
+                        <input class="form-field" type="text" name="country" placeholder="Country to deliver to"
+                            maxlength="50" required autocomplete="country-name" />
                         <button class="btn btn--primary service-card__button" type="submit">
                             Submit a request
                         </button>
@@ -307,7 +311,8 @@
                         </div>
                         <div>
                             <h3>Time efficiency</h3>
-                            <p>We handle the entire sourcing and inspection process, allowing you to focus on what matters most</p>
+                            <p>We handle the entire sourcing and inspection process, allowing you to focus on what
+                                matters most</p>
                         </div>
                     </article>
 
@@ -317,13 +322,67 @@
                         </div>
                         <div>
                             <h3>Results you can trust</h3>
-                            <p>We carefully select the finest vehicles on the market, tailored to your requirements and criteria</p>
+                            <p>We carefully select the finest vehicles on the market, tailored to your requirements and
+                                criteria</p>
                         </div>
                     </article>
                 </div>
             </div>
         </section>
     </main>
+
+    <dialog class="modal" id="request-modal" aria-labelledby="modal-title">
+        <div class="modal__inner">
+            <form method="dialog">
+                <button class="modal__close" aria-label="Close">×</button>
+            </form>
+
+            <h2 class="modal__title" id="modal-title">Tell us more about you</h2>
+            <p class="modal__subtitle">Please add a few more details.</p>
+
+            <form class="modal__form modal-form" data-success="Thank you! We will contact you shortly.">
+                <div class="modal__grid">
+                    <label class="modal__field">
+                        <span class="modal__label">Car brand</span>
+                        <input class="form-field" type="text" name="car-brand" maxlength="50" required
+                            autocomplete="off" />
+                    </label>
+
+                    <label class="modal__field">
+                        <span class="modal__label">Budget (€)</span>
+                        <input class="form-field form-field--budget" type="text" name="budget" inputmode="numeric"
+                            pattern="[0-9]{1,10}" maxlength="10" required autocomplete="off" />
+                    </label>
+
+                    <label class="modal__field">
+                        <span class="modal__label">Country to deliver to</span>
+                        <input class="form-field" type="text" name="country" maxlength="50" required
+                            autocomplete="country-name" />
+                    </label>
+
+                    <label class="modal__field">
+                        <span class="modal__label">Your name</span>
+                        <input class="form-field" type="text" name="name" maxlength="60" required autocomplete="name" />
+                    </label>
+
+                    <label class="modal__field">
+                        <span class="modal__label">Phone</span>
+                        <input class="form-field" type="tel" name="phone" inputmode="tel" pattern="[0-9 +\-]{6,20}"
+                            maxlength="20" required autocomplete="tel" />
+                    </label>
+
+                    <label class="modal__field">
+                        <span class="modal__label">Email</span>
+                        <input class="form-field" type="email" name="email" maxlength="100" required
+                            autocomplete="email" />
+                    </label>
+                </div>
+
+                <button class="btn btn--primary modal__submit" type="submit">Send request</button>
+                <p class="form-status modal__status" role="status" aria-live="polite"></p>
+            </form>
+        </div>
+    </dialog>
 
     <footer class="footer">
         <div class="container">
@@ -385,15 +444,9 @@
                 field.value = field.value.replace(/\D/g, '').slice(0, 10);
             });
         });
-
-        document.querySelectorAll('.request-form').forEach((form) => {
-            form.addEventListener('submit', (event) => {
-                event.preventDefault();
-                form.querySelector('.form-status').textContent = form.dataset.success;
-            });
-        });
     </script>
 
+    <script src="form.js"></script>
     <script src="animations.js"></script>
 </body>
 

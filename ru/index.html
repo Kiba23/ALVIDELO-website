@@ -119,7 +119,7 @@
             data-success="Заявка подготовлена. Мы свяжемся с вами в ближайшее время.">
             <input class="form-field" type="text" name="car-brand" placeholder="Марка автомобиля" maxlength="50"
               required autocomplete="off" />
-            <input class="form-field form-field--budget" type="text" name="budget" placeholder="Бюджет"
+            <input class="form-field form-field--budget" type="text" name="budget" placeholder="Бюджет (€)"
               inputmode="numeric" pattern="[0-9]{1,10}" maxlength="10" required autocomplete="off" />
             <input class="form-field" type="text" name="country" placeholder="Страна, в которую доставить"
               maxlength="50" required autocomplete="country-name" />
@@ -318,6 +318,56 @@
     </section>
   </main>
 
+  <dialog class="modal" id="request-modal" aria-labelledby="modal-title">
+    <div class="modal__inner">
+      <form method="dialog">
+        <button class="modal__close" aria-label="Close">×</button>
+      </form>
+
+      <h2 class="modal__title" id="modal-title">Расскажите нам больше о себе</h2>
+      <p class="modal__subtitle">Пожалуйста, добавьте ещё пару деталей.</p>
+
+      <form class="modal__form modal-form" data-success="Спасибо! Мы свяжемся с вами в ближайшее время.">
+        <div class="modal__grid">
+          <label class="modal__field">
+            <span class="modal__label">Марка автомобиля</span>
+            <input class="form-field" type="text" name="car-brand" maxlength="50" required autocomplete="off" />
+          </label>
+
+          <label class="modal__field">
+            <span class="modal__label">Бюджет (€)</span>
+            <input class="form-field form-field--budget" type="text" name="budget" inputmode="numeric"
+              pattern="[0-9]{1,10}" maxlength="10" required autocomplete="off" />
+          </label>
+
+          <label class="modal__field">
+            <span class="modal__label">Страна, в которую доставить</span>
+            <input class="form-field" type="text" name="country" maxlength="50" required autocomplete="country-name" />
+          </label>
+
+          <label class="modal__field">
+            <span class="modal__label">Ваше имя</span>
+            <input class="form-field" type="text" name="name" maxlength="60" required autocomplete="name" />
+          </label>
+
+          <label class="modal__field">
+            <span class="modal__label">Телефон</span>
+            <input class="form-field" type="tel" name="phone" inputmode="tel" pattern="[0-9 +\-]{6,20}" maxlength="20"
+              required autocomplete="tel" />
+          </label>
+
+          <label class="modal__field">
+            <span class="modal__label">Email</span>
+            <input class="form-field" type="email" name="email" maxlength="100" required autocomplete="email" />
+          </label>
+        </div>
+
+        <button class="btn btn--primary modal__submit" type="submit">Подать заявку</button>
+        <p class="form-status modal__status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </dialog>
+
   <footer class="footer">
     <div class="container">
       <div class="footer__top">
@@ -378,15 +428,9 @@
         field.value = field.value.replace(/\D/g, '').slice(0, 10);
       });
     });
-
-    document.querySelectorAll('.request-form').forEach((form) => {
-      form.addEventListener('submit', (event) => {
-        event.preventDefault();
-        form.querySelector('.form-status').textContent = form.dataset.success;
-      });
-    });
   </script>
 
+  <script src="../form.js"></script>
   <script src="../animations.js"></script>
 </body>
 
