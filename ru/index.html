@@ -327,7 +327,16 @@
       <h2 class="modal__title" id="modal-title">Расскажите нам больше о себе</h2>
       <p class="modal__subtitle">Пожалуйста, добавьте ещё пару деталей.</p>
 
-      <form class="modal__form modal-form" data-success="Спасибо! Мы свяжемся с вами в ближайшее время.">
+      <form class="modal__form modal-form"
+        data-sending="Отправляем…"
+        data-success="Спасибо! Мы свяжемся с вами в ближайшее время."
+        data-error="Что-то пошло не так. Попробуйте ещё раз или позвоните нам.">
+
+        <input type="hidden" name="access_key" value="bbf1415c-7fd0-40e6-ac77-4c024abf80ea">
+        <input type="hidden" name="subject" value="New car request — ALVIDELO">
+        <input type="hidden" name="from_name" value="ALVIDELO website">
+        <input type="hidden" name="language" value="ru">
+        <input type="checkbox" name="botcheck" hidden tabindex="-1" autocomplete="off">
         <div class="modal__grid">
           <label class="modal__field">
             <span class="modal__label">Марка автомобиля</span>

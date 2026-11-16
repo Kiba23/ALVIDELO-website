@@ -336,7 +336,16 @@
       <h2 class="modal__title" id="modal-title">Papasakokite daugiau apie save</h2>
       <p class="modal__subtitle">Pridėkite daugiau informacijos.</p>
 
-      <form class="modal__form modal-form" data-success="Ačiū! Netrukus su jumis susisieksime.">
+      <form class="modal__form modal-form"
+        data-sending="Siunčiama…"
+        data-success="Ačiū! Netrukus su jumis susisieksime."
+        data-error="Įvyko klaida. Bandykite dar kartą arba paskambinkite mums.">
+
+        <input type="hidden" name="access_key" value="bbf1415c-7fd0-40e6-ac77-4c024abf80ea">
+        <input type="hidden" name="subject" value="New car request — ALVIDELO">
+        <input type="hidden" name="from_name" value="ALVIDELO website">
+        <input type="hidden" name="language" value="lt">
+        <input type="checkbox" name="botcheck" hidden tabindex="-1" autocomplete="off">
         <div class="modal__grid">
           <label class="modal__field">
             <span class="modal__label">Automobilio markė</span>
